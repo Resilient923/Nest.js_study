@@ -2,7 +2,7 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
     project: 'tsconfig.json',
-    tsconfigRootDir:'C:/Users/HOME/Desktop/Coding/Nest/nest-study',
+    tsconfigRootDir:'C:/Users/HOME/Desktop/Coding/Nest.js/Nest.js_study',
     sourceType: 'module',
     ecmaVersion:'2020',
     ecmaFeatures:{

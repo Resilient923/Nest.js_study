@@ -3,7 +3,7 @@ import {NestExpressApplication} from '@nestjs/platform-express';
 import {DocumentBuilder, SwaggerModule} from '@nestjs/swagger';
 import passport from 'passport';
 import cookieParser from 'cookie-parser';
-import session from 'express-session';
+// import session from 'express-session';
 import path from 'path';
 import {ValidationPipe} from '@nestjs/common';
 
@@ -49,18 +49,18 @@ async function bootstrap() {
     SwaggerModule.setup('aapi', app, document);
 
     app.use(cookieParser());
-    app.use(
-        session({
-            resave: false,
-            saveUninitialized: false,
-            secret: process.env.COOKIE_SECRET,
-            cookie: {
-                httpOnly: true,
-            },
-        }),
-    );
+    // app.use(
+    //     session({
+    //         resave: false,
+    //         saveUninitialized: false,
+    //         secret: process.env.COOKIE_SECRET,
+    //         cookie: {
+    //             httpOnly: true,
+    //         },
+    //     }),
+    // );
     app.use(passport.initialize());
-    app.use(passport.session());
+    // app.use(passport.session());
     const port = process.env.PORT || 3000;
     await app.listen(port);
     console.log(`listening on port ${port}`);

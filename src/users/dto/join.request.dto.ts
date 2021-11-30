@@ -25,6 +25,7 @@ export class JoinRequestDto {
         description: '비밀번호',
     })
     public password: string;
-    //squash test를 위한 주석처리1
-    //squash test를 위한 주석처리2
+    //squasttest1
+    //squashtest2
+    //squashtest3
 }
